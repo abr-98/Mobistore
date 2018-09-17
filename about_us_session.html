@@ -1,0 +1,125 @@
+<?php 
+require_once('quote_admin_mobisore/startup_new.php');
+require_once('quote_admin_mobistore/includes/functions.php');
+$User_id=intval($_GET['mid']);
+$rs = mysqli_query($conn,"select User_name from user_description WHERE User_id='$User_id'");
+?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>About us</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="quote_admin_mobistore/mobistore.css" rel="stylesheet" type="text/css">
+<style>
+
+body{
+background-color:cornsilk;
+font-family: Arial;
+font-size:18px;
+line-hieght:20px;
+}
+#container{
+margin:auto;
+width:850px;
+
+}
+#menu{
+	float:left;
+	width:850px;
+	height:36px;
+	background-color:powerblue;
+	margin 0;
+	padding 0;
+	}
+	#menu  u1{
+	margin:0 0 0 50px;
+	padding 0;
+	background-color:black;
+	list-style: none;
+	}
+	#menu ul li{
+	background-color:powerblue;
+	display:inline;
+	}
+	#menu ul li a{
+	float:left;
+	width:150px;
+	background-color:powerblue;
+	hieght:20 px;
+	margin-top:8 px;
+	padding:0 5px 0 5px;
+	font-size:1.2em;
+	font-weight:bold;
+	text-align:center;
+	text decoration:none;
+	color:powerblue;
+	}
+	#menu li a:hover, #menu li .current{
+	background-color:white;
+}
+img
+{
+clear:both;
+float:left;
+width:850px;
+height:180px;
+padding:30px 150px 0 50px;
+margin-bottom:25px;
+}
+ul.circle{
+list-style-type:circle;
+color:black;
+float:left;
+font-size:18px;
+line hieght:1.5em;
+margin-top:25px;
+margin-left:80px;
+}
+
+#banner
+{
+clear:both;
+float:left;
+width :850px;
+hieght:80px;
+margin: 30px 30px 50px 50px;
+padding: 0,80px,0,80px;
+text-align: center;
+font-size: 20px;
+color:white;
+background-color:darkred;
+}
+  
+</style>
+</head>
+<body>
+
+<div id="container">
+<p><img src="header final.jpg" alt="header image" >
+<div id="menu">
+<ul>
+	<li><a href="http://localhost/mobistore/home_page_session.html">HOME</a></li>
+	<li><a href="http://localhost/mobistore/store_session.html?mid=<?php echo $row['User_id'];?>">VISIT STORE</a></li>
+	<li><a href="user_logout.php">LOG OUT</a></li>
+	<li><a href="http://localhost/mobistore/about_us_session.html ?mid=<?php echo $row['User_id'];?>">ABOUT US</a></li>
+	<li><a href="http://localhost/mobistore/contact_us_session.html ?mid=<?php echo $row['User_id'];?>">CONTACT US</a></li>
+</ul>
+</div>
+<p style="text-align:center;font-size:24px;line-height:3.5em"> Welcome</p>
+<div id="banner">
+<p>ABOUT US</p>
+</div>
+<p style="font-size:18px;line hieght:1.5em;text-align:center;margin: 30px 15px 50px 80px;">
+MOBISTORE is a specially designed bunch of webpages to guide user to  get the best phones according to their needs.
+It is designed by ABHIJIT ROY.Designed in june 2018.It targets the satisfaction of users.
+</p>
+<p style="color:powerblue;font-weight:bold;font-size:22px;line-hieght:2.5;text-align:left; margin-top:25px;margin-left:80px">OUR MISION</p>
+<ul class="circle">
+	<li>clear specifications of phones</li>
+	<li>ratings and reviews</li>
+	<li>accuracy</li>
+	<li>best avaiable offers</li>
+</ul>
+</body>
+</html>
