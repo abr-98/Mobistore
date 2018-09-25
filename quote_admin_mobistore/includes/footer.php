@@ -1,0 +1,1 @@
+Developed by <a href="http://localhost/mobistore/home_page.html" target="_blank">MOBISTORE</a>
